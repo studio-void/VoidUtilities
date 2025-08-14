@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct CheckboxToggleStyle: ToggleStyle {
-    func makeBody(configuration: Configuration) -> some View {
+@available(iOS 13.0, *)
+public struct CheckboxToggleStyle: ToggleStyle {
+    public func makeBody(configuration: Configuration) -> some View {
         Button(action: {
             configuration.isOn.toggle()
         }) {
@@ -20,6 +21,7 @@ struct CheckboxToggleStyle: ToggleStyle {
     }
 }
 
-extension ToggleStyle where Self == CheckboxToggleStyle {
+@available(iOS 13.0, *)
+public extension ToggleStyle where Self == CheckboxToggleStyle {
     static var checkboxstyle: CheckboxToggleStyle { CheckboxToggleStyle() }
 }
