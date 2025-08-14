@@ -8,7 +8,7 @@
 import SwiftUI
 
 @available(iOS 16.0, *)
-public struct GodingStepsView: View {
+public struct VoidStepsView: View {
     @State public var currentStep: Int
     @State public var totalSteps: Int
     @State public var tintColor: Color
