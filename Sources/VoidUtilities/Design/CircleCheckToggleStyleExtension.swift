@@ -8,7 +8,7 @@
 import SwiftUI
 
 @available(iOS 13.0, *)
-public struct CheckboxToggleStyle: ToggleStyle {
+public struct CircleCheckToggleStyle: ToggleStyle {
     public func makeBody(configuration: Configuration) -> some View {
         Button(action: {
             configuration.isOn.toggle()
@@ -16,7 +16,7 @@ public struct CheckboxToggleStyle: ToggleStyle {
             HStack {
                 Image(
                     systemName: configuration.isOn
-                        ? "checkmark.square.fill" : "square"
+                        ? "checkmark.circle.fill" : "circle"
                 )
                 configuration.label
             }
@@ -25,8 +25,8 @@ public struct CheckboxToggleStyle: ToggleStyle {
 }
 
 @available(iOS 13.0, *)
-extension ToggleStyle where Self == CheckboxToggleStyle {
-    public static var checkboxstyle: CheckboxToggleStyle {
-        CheckboxToggleStyle()
+extension ToggleStyle where Self == CircleCheckToggleStyle {
+    public static var circlecheckstyle: CircleCheckToggleStyle {
+        CircleCheckToggleStyle()
     }
 }
